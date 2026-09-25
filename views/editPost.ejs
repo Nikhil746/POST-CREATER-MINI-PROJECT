@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit post</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 min-h-screen">
+    <div class="max-w-xl mx-auto py-10 px-4">
+        <form action="/posts/edit/<%= post._id %>" method="POST" class="flex gap-2">
+            <textarea name="content" cols="60" rows="10" value="<%= post.content %>"
+                class="resize-none w-80 7-40 px-2 py-1 bg-gray-700 text-white text-sm rounded-md border border-gray-600" >
+                <%= post.description %>
+            </textarea>
+
+            <button type="submit"
+                class="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded-md hover:bg-gray-600">Save</button>
+        </form>
+    </div>
+</body>
+</html>
